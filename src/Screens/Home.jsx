@@ -2,7 +2,7 @@ import React from 'react'
 import fondoHome from '../../public/img/fondoHome.png'
 import { CardGrid } from '../Components/CardGrid';
 import { Footer } from '../Components/Footer';
-import MapComponent from '../Components/MapComponent';
+
 
 const Home = () => {
   return (

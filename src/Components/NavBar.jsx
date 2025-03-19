@@ -29,7 +29,7 @@ const NavBar = () => {
         </Link>
 
         {/* Menú en pantallas grandes */}
-        <ul className="hidden md:flex space-x-20 mr-5 text-white miFuenteBold text-[18px]">
+        <ul className="hidden md:flex space-x-20 mr-5 text-white miFuenteBold text-[20px]">
           {links.map((l) => (
             <li key={l.id}>
               <Link to={l.link} className="hover:underline">
