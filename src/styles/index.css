@@ -8,19 +8,38 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-.miFuente{
+.miFuente {
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-.miFuenteBold{
+.miFuenteBold {
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
     font-style: normal;
-    
+
 }
 
+[class^="number-slide"],
+[class*=" number-slide"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.number-slide1 {}
+
+.number-slide2 {}
+
+.number-slide3 {}
+
+.number-slide4 {}
+
+.number-slide5 {}
+
+.number-slide6 {}
 
 /* @font-face {
     font-family: 'MiFuente';
