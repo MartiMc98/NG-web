@@ -29,6 +29,100 @@
     max-width: 100%;
 }
 
+@media only screen and (max-width: 600px){
+    .recuadroRes {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        right: 5%;
+    }
+    .textoRes{
+        font-size: 13px;
+    }
+    .fuenteRes{
+        font-size: 18px;
+    }
+    .logoRes{
+        height: 70px ;
+        width: 120px;
+    }
+    .image{
+        height: 40vh !important;
+    }
+    .titHomeResp{
+        font-size: 13px;
+    }
+   
+    .cardResp{
+      display: block !important;
+      
+    }
+    .iconResp{
+        width: 40px;
+    }
+
+    .footerResp{
+        display: block !important;
+    }
+    .perfilResp{
+        display: block !important;
+        border-radius: 50%;
+        
+    }
+    .fotosResp{
+        display: block !important;
+        width: 30% !important ;
+    
+    }
+}
+@media only screen and (max-width: 400px){
+   
+    .logoRes{
+        height: 60px ;
+        width: 100px;
+    }
+ 
+    .textoFooterResp{
+        text-align: center;
+    }
+    .logossnResp{
+        width: 280px;
+        align-items: center;
+    }
+    
+  
+   
+}
+
+
+@media only screen and (max-width: 2000px){
+
+    .recuadroRes {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        right: 10%;
+        width: full;
+    }
+    .image{
+        height: 100vh;
+    }
+    .cardResp{
+        display: flex;
+    }
+    .perfilResp{
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+        
+    }
+    .fotosResp{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 50%;
+    }
+}
 .number-slide1 {}
 
 .number-slide2 {}
