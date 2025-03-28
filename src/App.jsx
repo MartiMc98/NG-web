@@ -6,6 +6,7 @@ import OurProducts from './Screens/OurProducts';
 import Contact from './Screens/Contact';
 import NavBar from './Components/NavBar';
 import './styles/index.css'; 
+import { TeamForm } from './Screens/TeamForm';
 
 function App() {
     return <div className='flex flex-col '>
@@ -16,6 +17,7 @@ function App() {
             <Route path='/aboutus' element={ <AboutUs/> } />
             <Route path='/ourproducts' element= {<OurProducts/>}/>
             <Route path='/contact' element= {<Contact/>}/>
+            <Route path='/teamForm' element= {<TeamForm/>}/>
             <Route/>
         </Routes>
        </BrowserRouter>

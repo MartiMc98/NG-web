@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import 'keen-slider/keen-slider.min.css';
 import { useKeenSlider } from "keen-slider/react"
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -9,15 +8,21 @@ import "swiper/css/pagination";
 
 export default function Carousel() {
 
-    const [sliderRef] = useKeenSlider({
-        slides: {
-            perView: 5,
-            spacing:25,
-             
-        }
-    })
+    const [width, setWidth] = useState(600);
+  
+
+    useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
     
-    
+    const [sliderRef] = useKeenSlider({ 
+        slides: { 
+           perView: width <= 500 ? 3 : 5,
+           spacing: 25
+      }
+})
  
     return (
        <>
@@ -52,7 +57,13 @@ export default function Carousel() {
 
 
 
-
+// const [sliderRef] = useKeenSlider({
+//     slides: {
+//         perView: 5,
+//         spacing:25,
+         
+//     }
+// });
 
 
 
