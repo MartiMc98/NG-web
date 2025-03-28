@@ -1,0 +1,73 @@
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+export const Products = () => {
+    return (
+        <div className="max-w-5xl mx-auto ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <Card
+                    title='SEGURO DE AUTO'
+                    text='Viaja tranquilo sabiendo que estás cubierto ante cualquier imprevisto. Desde accidentes hasta daños, garantizamos tu seguridad.'
+                    image='/img/Seguros/auto.png'
+                    link='/formulario/auto'
+                />
+                <Card
+                    title='SEGURO DE HOGAR'
+                    text='Tu hogar es tu refugio, y con nuestro Seguro de Hogar, lo tendrás protegido ante robos, daños o emergencias'
+                    image='/img/Seguros/hogar.png'
+                    link='/formulario/hogar'
+                />
+                <Card
+                    title='SEGURO DE MOTO'
+                    text='Tu moto merece estar protegida. Con nuestro Seguro de Moto, estarás cubierto ante accidentes, robos o imprevistos.'
+                    image='/img/Seguros/moto.png'
+                    link='/formulario/moto'
+                />
+                <Card
+                    title='SEGURO DE BICICLETA'
+                    text='Disfruta de la tranquilidad de saber que, en cualquier imprevisto, tu bici estará protegida y recibirás asistencia 24/7.'
+                    image='/img/Seguros/bicicleta.png'
+                    link='/formulario/bicicleta'
+                />
+                <Card
+                    title='SEGURO DE MASCOTA'
+                    text='Tu mascota merece lo mejor. Con nuestro Seguro de Mascotas, estarás cubierto ante emergencias y gastos veterinarios.'
+                    image='/img/Seguros/mascota.png'
+                    link='/formulario/mascota'
+                />
+                <Card
+                    title='SEGURO DE VIAJES'
+                    text='Con nuestro Seguro al Viajero, estarás cubierto ante imprevistos, desde cancelaciones hasta emergencias médicas. ¡Viaja seguro, viaja protegido!.'
+                    image='/img/Seguros/viajes.png'
+                    link='/formulario/viaje'
+                />
+
+            </div>
+
+        </div>
+    )
+}
+
+
+
+function Card({ title, text, image, link }) {
+    return (
+        <div className='text-center shadow-lg bg-white p-4 border flex flex-col justify-between h-full '>
+            <img
+                src={image}
+                alt={title}
+                className="mx-auto mb-3 lg:w-[280px] xl:w-[280px] lg:w-[150px] md:w-[100px] imgProducts"
+            />
+            <h2 className='text-base md:text-xl lg:text-2xl xl:text-2xl miFuenteBold'>{title}</h2>
+            <p className='miFuente text-base sm:text-sm md:text-md lg:text-[16px] xl:text-md  mt-2'>{text}</p>
+            <div className='mt-3 mb-3'>
+
+                <Link
+                    to={link}
+                    className='bg-[#D15F29] px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[19px] text-white miFuenteBold hover:bg-blue-800 transition duration-300'>
+                    Cotizá ahora </Link>
+            </div>
+
+        </div>
+    )
+}

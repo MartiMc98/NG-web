@@ -29,6 +29,7 @@
     max-width: 100%;
 }
 
+
 @media only screen and (max-width: 600px){
     .recuadroRes {
         position: absolute;
@@ -74,6 +75,9 @@
         width: 30% !important ;
     
     }
+    .imgProducts{
+        width: 350px;
+    }
 }
 @media only screen and (max-width: 400px){
    
@@ -88,6 +92,9 @@
     .logossnResp{
         width: 280px;
         align-items: center;
+    }
+    .imgProducts{
+        width: 250px;
     }
     
   

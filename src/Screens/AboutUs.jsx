@@ -44,16 +44,16 @@ const AboutUs = () => {
             <img src='/img/foto-prueba.jpg' alt='Imagen 4' className='perfilResp border rounded-full' />
             <h3 className='mt-1 text-center text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>Lorem Ipsum</h3>
             <p className='miFuente textoRes mb-7 text-center text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>Lorem Ipsum</p>
-            
+
           </div>
-          
+
         </div>
         <Link
-              to="/teamForm"
-              className="px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[25px]  text-white miFuenteBold rounded-lg hover:bg-blue-800 transition duration-300"
-            >
-              Registrate acá 
-            </Link>
+          to="/teamForm"
+          className="px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[25px]  text-white miFuenteBold rounded-lg hover:bg-blue-800 transition duration-300"
+        >
+          Registrate acá
+        </Link>
       </div>
       <Footer />
     </>

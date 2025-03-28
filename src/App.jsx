@@ -7,10 +7,13 @@ import Contact from './Screens/Contact';
 import NavBar from './Components/NavBar';
 import './styles/index.css'; 
 import { TeamForm } from './Screens/TeamForm';
+import ScrollToTop from './Components/ScrollToTop';
+import Formulario from './Components/Formulario';
 
 function App() {
     return <div className='flex flex-col '>
        <BrowserRouter>
+       <ScrollToTop/>
         <NavBar/>
         <Routes>
             <Route path='/' element={ <Home/> }/>
@@ -18,7 +21,7 @@ function App() {
             <Route path='/ourproducts' element= {<OurProducts/>}/>
             <Route path='/contact' element= {<Contact/>}/>
             <Route path='/teamForm' element= {<TeamForm/>}/>
-            <Route/>
+            <Route path="/formulario/:tipo" component={<Formulario/>} /> 
         </Routes>
        </BrowserRouter>
     </div>

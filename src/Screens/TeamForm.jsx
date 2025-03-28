@@ -1,10 +1,11 @@
 import React from 'react'
 import fondoFormEquipo from '../../public/img/fondoFormEquipo.png'
+import { Footer } from '../Components/Footer'
 
 export const TeamForm = () => {
     return (
         <>
-            <div className="relative w-full bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${fondoFormEquipo})`, height: '50vh' }}>
+            <div className="relative w-full bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${fondoFormEquipo})`, height: '60vh' }}>
                 <h1 className='titHomeResp miFuenteBold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white'>¿Querés formar parte de nuestro equipo?</h1>
 
             </div>
@@ -20,7 +21,7 @@ export const TeamForm = () => {
                                 type="text"
                                 id="nombre"
                                 name="nombre"
-                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2  outline-none"
                                 placeholder="Tu nombre"
                                 required
                             />
@@ -28,9 +29,9 @@ export const TeamForm = () => {
                         <div>
                             <input
                                 type="email"
-                                id="nombre"
+                                id="email"
                                 name="nombre"
-                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
                                 placeholder="E-mail"
                                 required
                             />
@@ -38,9 +39,9 @@ export const TeamForm = () => {
                         <div>
                             <input
                                 type="number"
-                                id="nombre"
+                                id="telefono"
                                 name="nombre"
-                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
                                 placeholder="Teléfono"
                                 required
                             />
@@ -48,20 +49,17 @@ export const TeamForm = () => {
                         <div>
                             <input
                                 type="text"
-                                id="nombre"
+                                id="textoConociste"
                                 name="nombre"
-                                className="w-full mt-1 mb-5  p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                className="w-full mt-1 mb-5  p-2 border rounded-lg focus:ring-2 outline-none"
                                 placeholder="¿Cómo nos conociste?"
                                 required
                             />
                         </div>
                         <div>
-                            <input
-                                type="textarea"
-                                id="nombre"
-                                name="nombre"
-                                className="w-full mt-1 mb-5  p-2 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                                placeholder="¿Cómo nos conociste?"
+                            <textarea
+                                className="w-full h-30 mt-1 mb-5  p-2 border rounded-lg  focus:ring-blue-500 "
+                                placeholder="Consulta"
                                 required
                             />
                         </div>
@@ -77,6 +75,8 @@ export const TeamForm = () => {
                 </div>
 
             </div>
+
+            <Footer/>
         </>
     )
 }
