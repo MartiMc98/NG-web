@@ -31,12 +31,14 @@
 
 
 @media only screen and (max-width: 600px){
+   
     .recuadroRes {
         position: absolute;
-        top: 15%;
+        top: 15% !important;
         left: 5%;
         right: 5%;
     }
+   
     .textoRes{
         font-size: 13px;
     }
@@ -78,6 +80,14 @@
     .imgProducts{
         width: 350px;
     }
+
+    .botRes{
+        margin-top: 7% !important;
+    }
+ 
+
+    
+   
 }
 @media only screen and (max-width: 400px){
    
@@ -95,10 +105,8 @@
     }
     .imgProducts{
         width: 250px;
-    }
+    } 
     
-  
-   
 }
 
 
@@ -106,11 +114,12 @@
 
     .recuadroRes {
         position: absolute;
-        top: 20%;
+        top: 30%;
         left: 10%;
         right: 10%;
         width: full;
     }
+  
     .image{
         height: 100vh;
     }
@@ -129,6 +138,14 @@
         height: auto;
         width: 50%;
     }
+    .recuadroResPro {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        right: 10%;
+        width: full;
+    }
+  
 }
 .number-slide1 {}
 
@@ -147,4 +164,17 @@
     src: url('../public/fonts/MiFuente.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-} */
+} 
+      .recuadroResPro{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        right: 10%;
+        width: full;
+    }*/
+    /* .recuadroResPro{
+        position: relative;
+        max-width: 300px;
+    }*
+    
+    

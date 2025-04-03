@@ -41,6 +41,48 @@ export const Products = () => {
                     image='/img/Seguros/viajes.png'
                     link='/formulario/viaje'
                 />
+                <Card
+                    title='SEGURO DE SALUD'
+                    text='Tu bienestar es lo más importante. Con nuestro Seguro de Salud, tendrás acceso a atención médica de calidad, consultas y emergencias.'
+                    image='/img/Seguros/salud.png'
+                    link='/formulario/salud'
+                />
+                <Card
+                    title='SEGURO DE ACCIDENTES PERSONALES'
+                    text='Con nuestra cobertura, te ofrecemos asistencia médica y compensación por lesiones, para que puedas seguir adelante sin preocupaciones.'
+                    image='/img/Seguros/AP.png'
+                    link='/formulario/ap'
+                />
+                <Card
+                    title='SEGURO DE INTEGRAL DE COMERCIO '
+                    text='Ofrecemos cobertura contra robos, incendios, daños materiales y más, para que tu comercio esté siempre protegido.'
+                    image='/img/Seguros/int-comercio.png'
+                    link='/formulario/int-comercio'
+                />
+                <Card
+                    title='SEGURO DE CAUCIÓN'
+                    text='No dejes al azar lo que está en juego, con nuestros productos, aseguras el cumplimiento de tus contratos y obligaciones, protegiendo tanto a tu empresa como a tus clientes.'
+                    image='/img/Seguros/caucion.png'
+                    link='/formulario/caucion'
+                />
+                <Card
+                    title='SEGURO DE EMBARCACIONES'
+                    text='Navega tranquilo, con nuestra cobertura, tu inversión estará protegida contra daños, robos y accidentes.'
+                    image='/img/Seguros/embarcaciones.png'
+                    link='/formulario/embarcaciones'
+                />
+                <Card
+                    title='SEGURO DE SEPELIO'
+                    text='Con nuestro seguro de sepelio, garantizas la cobertura total en momentos difíciles, sin que tu familia se preocupe por los gastos.'
+                    image='/img/Seguros/sepelio.png'
+                    link='/formulario/embarcaciones'
+                />
+                    <Card
+                    title='SEGURO DE VIDA'
+                    text='Garantiza el bienestar de tu familia con una cobertura que les brindará estabilidad y tranquilidad en momentos difíciles. Asegura su futuro y evita preocupaciones económicas cuando más lo necesiten.'
+                    image='/img/Seguros/vida.png'
+                    link='/formulario/vida'
+                />
 
             </div>
 
@@ -52,19 +94,19 @@ export const Products = () => {
 
 function Card({ title, text, image, link }) {
     return (
-        <div className='text-center shadow-lg bg-white p-4 border flex flex-col justify-between h-full '>
+        <div className='text-center flex flex-col justify-between items-center shadow-lg bg-white p-4 border h-full '>
             <img
                 src={image}
                 alt={title}
-                className="mx-auto mb-3 lg:w-[280px] xl:w-[280px] lg:w-[150px] md:w-[100px] imgProducts"
+                className="mx-auto mb-3 lg:w-[280px] xl:w-[280px] lg:w-[150px] md:w-[250px] imgProducts"
             />
             <h2 className='text-base md:text-xl lg:text-2xl xl:text-2xl miFuenteBold'>{title}</h2>
-            <p className='miFuente text-base sm:text-sm md:text-md lg:text-[16px] xl:text-md  mt-2'>{text}</p>
-            <div className='mt-3 mb-3'>
+            <p className='miFuente text-[15px] sm:text-sm md:text-md lg:text-[16px] xl:text-md  mt-2'>{text}</p>
+            <div className='mt-auto mb-3 botRes'>
 
                 <Link
                     to={link}
-                    className='bg-[#D15F29] px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[19px] text-white miFuenteBold hover:bg-blue-800 transition duration-300'>
+                    className='bg-[#D15F29] px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[19px] text-white miFuenteBold hover:bg-blue-900 transition duration-300'>
                     Cotizá ahora </Link>
             </div>
 
