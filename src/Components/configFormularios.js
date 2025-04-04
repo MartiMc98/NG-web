@@ -34,7 +34,7 @@ export const configFormularios = {
        
     ],
 
-    ap: [
+    ap:[
         { name: "nombreapellido", type: "text", placeholder: "Nombre y Apellido"}, 
         { name: "telefono", type: "number", placeholder: "Teléfono celular"},
         { name: "email", type: "email", placeholder: "Correo electrónico"},
