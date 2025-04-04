@@ -24,22 +24,22 @@ export const Products = () => {
                     link='/formulario/moto'
                 />
                 <Card
-                    title='SEGURO DE BICICLETA'
-                    text='Disfruta de la tranquilidad de saber que, en cualquier imprevisto, tu bici estará protegida y recibirás asistencia 24/7.'
-                    image='/img/Seguros/bicicleta.png'
-                    link='/formulario/bicicleta'
+                    title='SEGURO DE ACCIDENTES PERSONALES'
+                    text='Con nuestra cobertura, te ofrecemos asistencia médica y compensación por lesiones, para que puedas seguir adelante sin preocupaciones.'
+                    image='/img/Seguros/AP.png'
+                    link='/formulario/ap'
                 />
                 <Card
                     title='SEGURO DE MASCOTA'
                     text='Tu mascota merece lo mejor. Con nuestro Seguro de Mascotas, estarás cubierto ante emergencias y gastos veterinarios.'
                     image='/img/Seguros/mascota.png'
-                    link='/formulario/mascota'
+                    link='/formulario/mascotas'
                 />
                 <Card
                     title='SEGURO DE VIAJES'
                     text='Con nuestro Seguro al Viajero, estarás cubierto ante imprevistos, desde cancelaciones hasta emergencias médicas. ¡Viaja seguro, viaja protegido!.'
                     image='/img/Seguros/viajes.png'
-                    link='/formulario/viaje'
+                    link='/formulario/viajes'
                 />
                 <Card
                     title='SEGURO DE SALUD'
@@ -48,16 +48,16 @@ export const Products = () => {
                     link='/formulario/salud'
                 />
                 <Card
-                    title='SEGURO DE ACCIDENTES PERSONALES'
-                    text='Con nuestra cobertura, te ofrecemos asistencia médica y compensación por lesiones, para que puedas seguir adelante sin preocupaciones.'
-                    image='/img/Seguros/AP.png'
-                    link='/formulario/ap'
+                    title='SEGURO DE BICICLETAS'
+                    text='Disfruta de la tranquilidad de saber que, en cualquier imprevisto, tu bici estará protegida y recibirás asistencia 24/7.'
+                    image='/img/Seguros/bicicleta.png'
+                    link='/formulario/bicicletas'
                 />
                 <Card
                     title='SEGURO DE INTEGRAL DE COMERCIO '
                     text='Ofrecemos cobertura contra robos, incendios, daños materiales y más, para que tu comercio esté siempre protegido.'
                     image='/img/Seguros/int-comercio.png'
-                    link='/formulario/int-comercio'
+                    link='/formulario/comercios'
                 />
                 <Card
                     title='SEGURO DE CAUCIÓN'
@@ -75,7 +75,7 @@ export const Products = () => {
                     title='SEGURO DE SEPELIO'
                     text='Con nuestro seguro de sepelio, garantizas la cobertura total en momentos difíciles, sin que tu familia se preocupe por los gastos.'
                     image='/img/Seguros/sepelio.png'
-                    link='/formulario/embarcaciones'
+                    link='/formulario/sepelio'
                 />
                     <Card
                     title='SEGURO DE VIDA'

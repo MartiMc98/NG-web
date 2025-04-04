@@ -1,5 +1,5 @@
 import  Home  from './Screens/Home';
-import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import AboutUs  from './Screens/AboutUs.JSX';
 import OurProducts from './Screens/OurProducts';
@@ -12,7 +12,7 @@ import Formulario from './Components/Formulario';
 
 function App() {
     return <div className='flex flex-col '>
-       <BrowserRouter>
+       <Router>
        <ScrollToTop/>
         <NavBar/>
         <Routes>
@@ -21,9 +21,9 @@ function App() {
             <Route path='/ourproducts' element= {<OurProducts/>}/>
             <Route path='/contact' element= {<Contact/>}/>
             <Route path='/teamForm' element= {<TeamForm/>}/>
-            <Route path="/formulario/:tipo" component={<Formulario/>} /> 
+            <Route path="/formulario/:tipo" element={<Formulario/>} /> 
         </Routes>
-       </BrowserRouter>
+       </Router>
     </div>
 }
 export default App;
