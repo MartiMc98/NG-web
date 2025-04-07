@@ -1,0 +1,66 @@
+require('dotenv').config();
+
+const express = require('express');
+const cors = require('cors');
+const nodemailer = require('nodemailer');
+
+const app = express();
+
+
+app.use(cors());
+app.use(express.json());
+
+app.post('/send-email', async (req, res) => {
+
+    console.log("Se hizo POST a /send-email");
+    console.log("Body recibido:", req.body);
+
+    const { name, email, number, know, message } = req.body;
+
+    try {
+        const transporter = nodemailer.createTransport({
+            host: "dtc037.ferozo.com",
+            port: 587, // <- PUERTO TLS
+            secure: false, // <- MUY IMPORTANTE
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS,
+            },
+            tls: {
+                rejectUnauthorized: false, // permite cert dudoso
+            },
+        });
+
+        console.log("Datos recibidos:", req.body);
+        await transporter.sendMail({
+            from: `"Consulta Web" <${process.env.EMAIL_USER}>`,
+            to: process.env.EMAIL_USER,
+            subject: "Nueva consulta desde la web",
+            html: `<p><strong>Nombre:</strong>${name}</p>
+                <p><strong>Email:</strong>${email}</p>
+                <p><strong>Teléfono:</strong>${number}</p>
+                <p><strong>¿Como nos conociste?</strong>${know}</p>
+                <p><strong>Consulta</strong>${message}</p>` 
+        });
+
+        res.status(200).send({ success: true });
+    } catch (err) {
+        console.error("Error al enviar mail", err);
+        res.status(500).send({ success: false, error: "Error al enviar el mail" })
+    }
+
+});
+
+app.listen(5000, () => {
+    console.log(`Servidor corriendo en http://localhost:5000`)
+});
+
+
+/*from: `"Consulta Web" <${process.env.EMAIL_USER}>`,
+            to: process.env.EMAIL_USER,
+            subject: "Nueva consulta desde la web",
+            html: `<p><strong>Nombre:</strong>${name}</p>
+                <p><strong>Email:</strong>${email}</p>
+                <p><strong>Teléfono:</strong>${number}</p>
+                <p><strong>¿Como nos conociste?</strong>${know}</p>
+                <p><strong>Consulta</strong>${message}</p>`*/
