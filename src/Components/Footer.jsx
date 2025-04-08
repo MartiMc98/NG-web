@@ -15,7 +15,7 @@ export const Footer = () => {
                 <div className='p-6'>
                     <div className='flex items-center m-2'>
                         <img src='/img/icono-map.png' alt='icono mapa' className="w-7 h-7 mx-3" />
-                        <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>San Rafael, M5602, Avenida Hipólito Yrigoyen, 698, san rafael</h5>
+                        <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>Ballofet 1074 Local 1, San Rafael</h5>
                     </div>
                     <div className='flex items-center m-2'>
                         <img src='/img/icono-tel.png' alt='icono mapa' className="w-7 h-7 mx-3" />

@@ -2,11 +2,41 @@ import { useParams } from 'react-router-dom';
 import { configFormularios } from './configFormularios';
 import fondoCotizacion from '../../public/img/fondoFormCotizacion.png'
 import { Footer } from './Footer';
+import { useState } from 'react';
+import axios from 'axios';
+
 
 const Formulario = () => {
+ 
   const { tipo } = useParams();  // Obtiene el parámetro 'tipo' de la URL
-  console.log("tipo recibirdo", tipo);
+ 
   const campos = configFormularios[tipo] || [];
+  const [formData, setFormData] = useState({});
+  const [sent, setSent] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  }
+
+  const handleSubmit = async(e) => {
+    e.preventDefault();
+    console.log("Datos a enviar: ", formData)
+    try{
+      await axios.post('http://localhost:5000/send-email', {
+        tipo, 
+        ...formData
+      });
+      setSent(true);
+    } catch(error){
+      console.error("Error al enviar:", error);
+      
+    }
+  }
+
 
   return (
     <>
@@ -15,19 +45,26 @@ const Formulario = () => {
       </div>
       <div className='gap-10 p-6 text-black bg-[#B6C9A1]'>
         <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white mt-10 p-6 bg-white rounded-lg border border-[#001A57]'>
-         <h1 className='text-2xl font-bold mb-4 text-[#001A57] text-center'>Formulario para {tipo}</h1>
-          <form className='space-y-4'>
+         
+         { sent ? (
+          <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
+         ) : (
+          <form className='space-y-4' onSubmit={handleSubmit}>
+            <h1 className='text-2xl font-bold mb-4 text-[#001A57] text-center'>Formulario para {tipo}</h1>
             {campos.map((campo, index) => (
               <input
                 key={index}
                 type={campo.type}
                 name={campo.name}
                 placeholder={campo.placeholder}
+                value={formData[campo.name] || ''}
+                onChange={handleChange}
                 className='w-full p-3 border rounded-lg'
               />
             ))}
             <button type='submit' className='bg-[#001A57] miFuente w-full text-white  py-2 rounded-lg hover:bg-blue-800 transition duration-300'>Enviar</button>
           </form>
+         )}
         </div>
 
       </div>

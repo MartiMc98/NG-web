@@ -15,13 +15,13 @@ app.post('/send-email', async (req, res) => {
     console.log("Se hizo POST a /send-email");
     console.log("Body recibido:", req.body);
 
-    const { name, email, number, know, message } = req.body;
+    const { tipo, ...formulario } = req.body;
 
     try {
         const transporter = nodemailer.createTransport({
             host: "dtc037.ferozo.com",
-            port: 587, // <- PUERTO TLS
-            secure: false, // <- MUY IMPORTANTE
+            port: 465, // <- PUERTO TLS
+            secure: true, // <- MUY IMPORTANTE
             auth: {
                 user: process.env.EMAIL_USER,
                 pass: process.env.EMAIL_PASS,
@@ -31,16 +31,15 @@ app.post('/send-email', async (req, res) => {
             },
         });
 
-        console.log("Datos recibidos:", req.body);
+        const camposHtml = Object.entries(formulario).map(([key, value]) => {
+            return `<p><strong>${key}:</strong> ${value}</p>`
+        } ).join('');
+
         await transporter.sendMail({
             from: `"Consulta Web" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
-            subject: "Nueva consulta desde la web",
-            html: `<p><strong>Nombre:</strong>${name}</p>
-                <p><strong>Email:</strong>${email}</p>
-                <p><strong>Teléfono:</strong>${number}</p>
-                <p><strong>¿Como nos conociste?</strong>${know}</p>
-                <p><strong>Consulta</strong>${message}</p>` 
+            subject: tipo ? `Nueva consulta: ${tipo}` : 'Nueva consulta desde la web',
+            html: camposHtml, 
         });
 
         res.status(200).send({ success: true });

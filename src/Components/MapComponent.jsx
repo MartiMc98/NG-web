@@ -3,7 +3,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
 const MapComponent = () => {
-  const position = [-34.61292, -68.33831];
+  const position = [-34.622335, -68.350650];
 
   return (
     <div className="p-6 h-75">

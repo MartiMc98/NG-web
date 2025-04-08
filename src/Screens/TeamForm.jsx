@@ -19,7 +19,7 @@ export const TeamForm = () => {
             await axios.post("http://localhost:5000/send-email", form, {
                 headers: {
                     "Content-Type": "application/json"
-                  }
+                }
             });
             setSent(true);
         } catch (error) {
@@ -35,13 +35,13 @@ export const TeamForm = () => {
             </div>
             <div className='gap-10 p-6 text-black bg-[#B6C9A1]'>
                 <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white mt-10 p-6 bg-white rounded-lg border border-[#001A57]'>
-
-                    <h1 className='miFuenteBold text-[#001A57] mb-3'>Completa el formulario y te contactaremos a la brevedad: </h1>
                     {sent ? (
                         <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
                     ) : (
 
                         <form onSubmit={handleSubmit}>
+
+                            <h1 className='miFuenteBold text-[#001A57] mb-3'>Completa el formulario y te contactaremos a la brevedad: </h1>
                             <div>
                                 <input
                                     type="text"
