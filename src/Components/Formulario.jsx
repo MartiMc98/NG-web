@@ -2,8 +2,9 @@ import { useParams } from 'react-router-dom';
 import { configFormularios } from './configFormularios';
 import fondoCotizacion from '../../public/img/fondoFormCotizacion.png'
 import { Footer } from './Footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { modelosPorMarca } from './modelosDeAuto';
 
 
 const Formulario = () => {
@@ -13,6 +14,22 @@ const Formulario = () => {
   const campos = configFormularios[tipo] || [];
   const [formData, setFormData] = useState({});
   const [sent, setSent] = useState(false);
+
+  const [camposAuto, setCamposAuto] = useState(configFormularios["auto"]);
+
+useEffect(() => {
+  const marcaSeleccionada = formData.marca;
+  const nuevosCampos = configFormularios["auto"].map(campoAuto => {
+    if (campoAuto.name === "modelo" && marcaSeleccionada) {
+      return {
+        ...campoAuto,
+        options: modelosPorMarca[marcaSeleccionada] || []
+      };
+    }
+    return campoAuto;
+  });
+  setCamposAuto(nuevosCampos);
+}, [formData.marca]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -52,6 +69,19 @@ const Formulario = () => {
           <form className='space-y-4' onSubmit={handleSubmit}>
             <h1 className='text-2xl font-bold mb-4 text-[#001A57] text-center'>Formulario para {tipo}</h1>
             {campos.map((campo, index) => (
+              campo.type === "select" ? (
+                <select 
+                key={index}
+                name={campo.name}
+                value={formData[campo.name] || ''}
+                onChange={handleChange}
+                className='w-full p-3 border rounded-lg'>
+                  <option value="" disabled>{campo.placeholder}</option>
+                  {campo.options.map((option,i) => (
+                    <option key={i} value={option}>{option}</option>
+                  ))}
+                </select>
+              ) : (
               <input
                 key={index}
                 type={campo.type}
@@ -61,6 +91,7 @@ const Formulario = () => {
                 onChange={handleChange}
                 className='w-full p-3 border rounded-lg'
               />
+              )
             ))}
             <button type='submit' className='bg-[#001A57] miFuente w-full text-white  py-2 rounded-lg hover:bg-blue-800 transition duration-300'>Enviar</button>
           </form>

@@ -1,4 +1,7 @@
+import { modelosPorMarca } from "./modelosDeAuto";
+
 export const configFormularios = {
+     
 
     auto: [
         { name: "nombreapellido", type: "text", placeholder: "Nombre y Apellido"}, 
@@ -6,9 +9,9 @@ export const configFormularios = {
         { name: "email", type: "email", placeholder: "Correo electrónico"},
         { name: "telefono", type: "number", placeholder: "Teléfono celular"},
         { name: "cp", type: "number", placeholder: "Código Postal" },
-        { name: "marca", type: "text", placeholder: "Marca" },
+        { name: "marca", type: "select", placeholder: "Marca", options: Object.keys(modelosPorMarca) },
         { name: "anio", type: "number", placeholder: "Año del vehículo" },
-        { name: "modelo", type: "text", placeholder: "Modelo" },
+        { name: "modelo", type: "text", placeholder: "Modelo", options:[] },
         { name: "version", type: "text", placeholder: "Versión" },
 
     ],
@@ -17,7 +20,7 @@ export const configFormularios = {
         { name: "telefono", type: "number", placeholder: "Teléfono celular"},
         { name: "email", type: "email", placeholder: "Correo electrónico"},
         { name: "metros", type: "number", placeholder: "Metros cuadrados"},
-        { name: "vivienda", type: "text", placeholder: "Tipo de vivienda"},
+        { name: "vivienda", type: "select", placeholder: "Tipo de vivienda", options: ["Casa", "Departamento", "PH", "Otro"]},
         { name: "cp", type: "number", placeholder: "Código Postal" },
         { name: "localidad", type: "text", placeholder: "Localidad"},
         { name: "adicionales", type: "number", placeholder: "Metros adicionales"}
