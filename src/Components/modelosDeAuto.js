@@ -1,7 +1,7 @@
 export const modelosPorMarca = {
-  Toyota: ["Corolla", "Hilux", "Etios", "Yaris", "SW4", "Camry", "RAV4", "Avanza"],
-  Ford: ["Focus", "Fiesta", "EcoSport", "Ranger", "Ka", "Territory", "Mondeo", "Kuga"],
-  Chevrolet: ["Onix", "Prisma", "Cruze", "Tracker", "S10", "Spin", "Corsa", "Aveo"],
+  Toyota: ["Corolla", "Hilux", "Innova", "LandCruiserPrado", "LandCruiser200", "Etios", "Yaris", "SW4", "Camry", "Rav4", "Prius", "FT86", "GT86", "GTAUT86"],
+  Ford: ["Focus", "FocusL8", "Fiesta", "EcoSport", "Ranger", "Ka", "SMax", "Mondeo", "Kuga", "Transit", "Mustang"],
+  Chevrolet: ["Agil", "Camaro", "Captiva", "Celta", "Classic", "Cobalt","Montana", "Sonic","Trailblazer", "Onix", "Prisma", "Cruze", "Tracker", "S10", "Spin", "Corsa", "Aveo"],
   Renault: ["Kwid", "Sandero", "Logan", "Duster", "Stepway", "Fluence", "Clio", "Captur"],
   Volkswagen: ["Gol", "Voyage", "Vento", "Amarok", "T-Cross", "Nivus", "Polo", "Tiguan"],
   Peugeot: ["208", "2008", "3008", "307", "308", "Partner", "RCZ", "Expert"],

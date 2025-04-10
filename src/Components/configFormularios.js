@@ -9,9 +9,9 @@ export const configFormularios = {
         { name: "email", type: "email", placeholder: "Correo electrónico"},
         { name: "telefono", type: "number", placeholder: "Teléfono celular"},
         { name: "cp", type: "number", placeholder: "Código Postal" },
-        { name: "marca", type: "select", placeholder: "Marca", options: Object.keys(modelosPorMarca) },
+        { name: "marca", type: "select", placeholder: "Marca", options:["Toyota", "Ford", "Chevrolet", "Renault", "Volkswagen", "Peugeot", "Fiat", "Honda", "Nissan", "Jeep", "Citroën", "MercedesBenz", "BMW", "Audi", "Hyundai" ] },
         { name: "anio", type: "number", placeholder: "Año del vehículo" },
-        { name: "modelo", type: "text", placeholder: "Modelo", options:[] },
+        { name: "modelo", type: "select", placeholder: "Modelo" },
         { name: "version", type: "text", placeholder: "Versión" },
 
     ],
