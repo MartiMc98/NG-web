@@ -12,7 +12,7 @@ export const configFormularios = {
         { name: "marca", type: "select", placeholder: "Marca", options:["Toyota", "Ford", "Chevrolet", "Renault", "Volkswagen", "Peugeot", "Fiat", "Honda", "Nissan", "Jeep", "Citroën", "MercedesBenz", "BMW", "Audi", "Hyundai" ] },
         { name: "anio", type: "number", placeholder: "Año del vehículo" },
         { name: "modelo", type: "select", placeholder: "Modelo" },
-        { name: "version", type: "text", placeholder: "Versión" },
+        { name: "version", type: "select", placeholder: "Versión" },
 
     ],
     hogar: [

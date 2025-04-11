@@ -5,6 +5,7 @@ import { Footer } from './Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { modelosPorMarca } from './modelosDeAuto';
+import { versionesPorModelo } from './versionesPorModelo';
 
 const Formulario = () => {
   const { tipo } = useParams();  // Obtiene el parámetro 'tipo' de la URL
@@ -72,6 +73,11 @@ const Formulario = () => {
                   options = modelosPorMarca[formData["marca"]] || [];
                 }
                 options = options || [];
+
+                if(campo.name === "version" && formData["marca"] && formData["modelo"]){
+                  options = versionesPorModelo[formData["marca"]] && 
+                            versionesPorModelo[formData["marca"]][formData["modelo"]] || [];
+                }
 
                 return campo.type === "select" ? (
                   <select
