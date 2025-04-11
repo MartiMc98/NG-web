@@ -33,7 +33,7 @@ app.post('/send-email', async (req, res) => {
 
         const camposHtml = Object.entries(formulario).map(([key, value]) => {
             return `<p><strong>${key}:</strong> ${value}</p>`
-        } ).join('');
+        } ).join(' ');
 
         await transporter.sendMail({
             from: `"Consulta Web" <${process.env.EMAIL_USER}>`,
