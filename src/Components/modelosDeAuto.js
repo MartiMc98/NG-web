@@ -9,7 +9,7 @@ export const modelosPorMarca = {
   Honda: ["Civic", "Fit", "City", "HR-V", "CR-V", "Accord", "WR-V"],
   Nissan: ["March", "Versa", "Sentra", "Kicks", "Frontier", "X-Trail", "Note"],
   Jeep: ["Renegade", "Compass", "Grand Cherokee", "Cherokee", "Wrangler"],
-  Citroën: ["C3", "C4", "C5", "Berlingo", "C-Elysée", "Aircross"],
+  Citroën: [ "BerlingoFurgon", "BerlingoMultispace",  "C3", "C3Aircross", "C3Picasso", "C4", "C4Aircross", "C4GrandPicasso", "C4Lounge", "C4Picasso", "Jumper"],
   MercedesBenz: ["Clase A", "Clase C", "Clase E", "GLA", "GLC", "Sprinter"],
   BMW: ["Serie 1", "Serie 3", "Serie 5", "X1", "X3", "X5"],
   Audi: ["A1", "A3", "A4", "Q3", "Q5", "Q7"],

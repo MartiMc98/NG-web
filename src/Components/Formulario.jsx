@@ -5,7 +5,7 @@ import { Footer } from './Footer';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { modelosPorMarca } from './modelosDeAuto';
-import { versionesPorModelo } from './versionesPorModelo';
+
 
 const Formulario = () => {
   const { tipo } = useParams();  // Obtiene el parámetro 'tipo' de la URL
@@ -56,7 +56,7 @@ const Formulario = () => {
       </div>
 
       <div className='gap-10 p-6 text-black bg-[#B6C9A1]'>
-        <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white mt-10 p-6 rounded-lg border border-[#001A57]'>
+        <div className='max-w-md md:max-w-lg lg:max-w-[60vh] mx-auto bg-white mt-10 p-6 rounded-lg border border-[#001A57]'>
           {sent ? (
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
@@ -73,11 +73,6 @@ const Formulario = () => {
                   options = modelosPorMarca[formData["marca"]] || [];
                 }
                 options = options || [];
-
-                if(campo.name === "version" && formData["marca"] && formData["modelo"]){
-                  options = versionesPorModelo[formData["marca"]] && 
-                            versionesPorModelo[formData["marca"]][formData["modelo"]] || [];
-                }
 
                 return campo.type === "select" ? (
                   <select
@@ -98,6 +93,7 @@ const Formulario = () => {
                     type={campo.type}
                     name={campo.name}
                     placeholder={campo.placeholder}
+                    required={campo.required}
                     value={formData[campo.name] || ''}
                     onChange={handleChange}
                     className='w-full p-3 border rounded-lg'
@@ -121,3 +117,8 @@ const Formulario = () => {
 };
 
 export default Formulario;
+
+/* if(campo.name === "version" && formData["marca"] && formData["modelo"]){
+                  options = versionesPorModelo[formData["marca"]] && 
+                            versionesPorModelo[formData["marca"]][formData["modelo"]] || [];
+                }*/
