@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^5.1.0",
+    "framer-motion": "^12.7.3",
     "keen-slider": "^6.8.6",
     "leaflet": "^1.9.4",
     "nodemailer": "^6.10.0",

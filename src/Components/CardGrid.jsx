@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { motion } from "framer-motion";
 
 export const CardGrid = () => {
     return (
@@ -15,7 +16,12 @@ export const CardGrid = () => {
 
 function Card({ title, text, image }) {
     return (
-        <div className='text-center mb-5 shadow-lg rounded-2xl p-6 border border-white-200'>
+        <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, ease: "easeIn" }}
+            viewport={{ once: true }}
+            className='text-center mb-5 shadow-lg rounded-2xl p-6 border border-white-200'>
             <img
                 src={image}
                 alt={title}
@@ -24,6 +30,6 @@ function Card({ title, text, image }) {
             <h2 className='titHomeResp text-base md:text-xl lg:text-2xl xl:text-3xl miFuenteBold text-white'>{title}</h2>
             <p className='miFuente textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl text-white mt-2'>{text}</p>
 
-        </div>
+        </motion.div>
     )
 }
