@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import fondoFormEquipo from '../../public/img/fondoFormEquipo.png'
 import { Footer } from '../Components/Footer'
 import axios from "axios";
+import { motion } from "framer-motion";
 
 export const TeamForm = () => {
 
@@ -29,12 +30,20 @@ export const TeamForm = () => {
 
     return (
         <>
-            <div className="relative w-full bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${fondoFormEquipo})`, height: '60vh' }}>
+            <motion.div
+                initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
+                whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                transition={{ duration: 0.9, ease: "easeOut" }}
+                viewport={{ once: true }} className="bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${fondoFormEquipo})`, height: '60vh' }}>
                 <h1 className='titHomeResp miFuenteBold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white'>¿Querés formar parte de nuestro equipo?</h1>
 
-            </div>
-            <div className='gap-10 p-6 text-black bg-[#B6C9A1]'>
-                <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white mt-10 p-6 bg-white rounded-lg border border-[#001A57]'>
+            </motion.div>
+            <div className='text-black bg-[#B6C9A1] p-6'>
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
+                    whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    viewport={{ once: true }} className='md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-md border border-[#001A57]'>
                     {sent ? (
                         <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
                     ) : (
@@ -109,9 +118,11 @@ export const TeamForm = () => {
                             </button>
 
                         </form>
+
+
                     )
                     }
-                </div>
+                </motion.div>
 
             </div>
 

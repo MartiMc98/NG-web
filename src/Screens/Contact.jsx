@@ -31,25 +31,25 @@ const Contact = () => {
 
   return (
     <>
-      <motion.div initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
+      <motion.div initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
         whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }}
         className="image w-full bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${fondoContact})`, height: '55vh' }}>
         <h1 className='text-center miFuenteBold sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl text-white'>Tu opinión es importante, contáctanos y te atenderemos en breve.</h1>
 
       </motion.div>
 
-      <motion.div  initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9 }}
-        viewport={{ once: true }} className='p-10 text-black bg-[#B6C9A1]'>
-        <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white mt-10 p-6 bg-white rounded-lg border border-[#001A57]'>
+      <div className='p-10 text-black bg-[#B6C9A1]'>
+        <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-lg border border-[#001A57]'>
           {sent ? (
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
 
-            <form onSubmit={handleSubmit}>
+            <motion.form initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9 }}
+            viewport={{ once: true }} onSubmit={handleSubmit}>
 
               <h1 className=' text-center miFuenteBold text-[#001A57] mb-3'>Dejanos tu mensaje: </h1>
               <div>
@@ -99,15 +99,23 @@ const Contact = () => {
                 />
               </div>
 
-              <button
+              <motion.button
+                initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
+                whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: true }}
                 type="submit"
                 className="w-full bg-[#001A57] text-white py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Enviar
-              </button>
+              </motion.button>
 
               <h1 className='miFuenteBold text-[#001A57] mt-7 text-center'>O encontranos en: </h1>
-              <a
+              <motion.a
+                initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
+                whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: true }}
                 href="https://www.instagram.com/ngbrokerseguros/?next=%2F"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -115,8 +123,12 @@ const Contact = () => {
               >
                 <FaInstagram />
                 Instagram
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
+                whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: true }}
                 href="https://www.facebook.com/profile.php?id=61575090637921"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -124,9 +136,13 @@ const Contact = () => {
               >
                 <FaFacebook />
                 Facebook
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
+                initial={{ opacity: 0  }}      // arranca invisible y un poco más abajo
+                whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                viewport={{ once: true }}
                 href="https://api.whatsapp.com/send/?phone=2604572885&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -134,14 +150,14 @@ const Contact = () => {
               >
                 <FaWhatsapp />
                 WhatsApp
-              </a>
+              </motion.a>
 
-            </form>
+            </motion.form>
           )
           }
         </div>
 
-      </motion.div>
+      </div>
       <Footer />
     </>
   )

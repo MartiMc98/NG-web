@@ -8,9 +8,9 @@ import { motion } from "framer-motion";
 const Home = () => {
   return (
     <>
-      <motion.div initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
+      <motion.div initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
         whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }} className="image w-full bg-cover bg-center flex justify-center items-center"
         style={{ backgroundImage: `url(${fondoHome})` }}>
         <h1 className='titHomeResp miFuenteBold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white'>Seguros a tu medida, confianza garantizada</h1>

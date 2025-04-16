@@ -1,9 +1,14 @@
-import React from 'react'
-import MapComponent from './MapComponent'
+import React from 'react';
+import { motion } from "framer-motion";
+import MapComponent from './MapComponent';
 
 export const Footer = () => {
     return (
-        <div>
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
+            whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}>
             <MapComponent />
             <div className='flex justify-center footerResp'>
                 <div>
@@ -22,14 +27,14 @@ export const Footer = () => {
                         <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'> 2604572885</h5>
                     </div>
                     <div className='flex items-center m-2'>
-                    <img src='/img/icono-sobre.png' alt='icono mapa' className="w-7 h-7 mx-3" />
-                    <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>consultas@ngbrokerseguros.com</h5>
+                        <img src='/img/icono-sobre.png' alt='icono mapa' className="w-7 h-7 mx-3" />
+                        <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>consultas@ngbrokerseguros.com</h5>
                     </div>
 
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     )
 }
 /*text-[#08448C] textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl*/

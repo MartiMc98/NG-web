@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 const OurProducts = () => {
   return (
     <>
-      <motion.div initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
+      <motion.div initial={{ opacity: 0 }}      // arranca invisible y un poco más abajo
         whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
         viewport={{ once: true }} className="relative w-full bg-cover bg-center" style={{ backgroundImage: `url(${fondoProductos})`, height: '50vh' }}>
         <div className="recuadroRes">
           <div className='bg-[#9caf88] p-4 rounded-md border border-white text-center '>

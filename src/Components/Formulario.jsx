@@ -55,8 +55,8 @@ const Formulario = () => {
         </h1>
       </div>
 
-      <div className='gap-10 p-6 text-black bg-[#B6C9A1]'>
-        <div className='max-w-md md:max-w-lg lg:max-w-[60vh] mx-auto bg-white mt-10 p-6 rounded-lg border border-[#001A57]'>
+      <div className='text-black bg-[#B6C9A1] p-6'>
+        <div className='max-w-md md:max-w-lg lg:max-w-[60vh] mx-auto bg-white p-6 rounded-lg border border-[#001A57]'>
           {sent ? (
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
