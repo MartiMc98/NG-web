@@ -22,7 +22,7 @@ export default function Carousel() {
         loop: true,
         slides: {
           perView: width <= 500 ? 3 : 5,
-          spacing: 25,
+          spacing: 15,
         },
       });
 
@@ -51,6 +51,7 @@ export default function Carousel() {
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-ru.png" alt="logo-ru"/>
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-sancristobal.png" alt="logo-sancristobal"/>
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-triunfo.png" alt="logo-triunfo"/>
+          
 
                     
         </div>
