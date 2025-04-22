@@ -17,7 +17,7 @@ export const TeamForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("http://localhost:5000/send-email", form, {
+            await axios.post("https://ng-web-backend.onrender.com/send-email", form, {
                 headers: {
                     "Content-Type": "application/json"
                 }
