@@ -1,9 +1,8 @@
 import  Home  from './Screens/Home';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-import AboutUs  from './Screens/AboutUs.JSX';
 import OurProducts from './Screens/OurProducts';
 import Contact from './Screens/Contact';
+import AboutUs from './Screens/AboutUs';
 import NavBar from './Components/NavBar';
 import './styles/index.css'; 
 import { TeamForm } from './Screens/TeamForm';
