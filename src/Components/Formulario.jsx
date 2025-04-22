@@ -34,7 +34,7 @@ const Formulario = () => {
     e.preventDefault();
     console.log("Datos a enviar: ", formData);
     try {
-      await axios.post('https://ng-web-backend.onrender.com', {
+      await axios.post('https://ng-web-backend.onrender.com/send-email', {
         tipo,
         ...formData
       });
