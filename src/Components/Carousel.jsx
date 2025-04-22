@@ -52,7 +52,6 @@ export default function Carousel() {
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-sancristobal.png" alt="logo-sancristobal"/>
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-triunfo.png" alt="logo-triunfo"/>
           
-
                     
         </div>
 

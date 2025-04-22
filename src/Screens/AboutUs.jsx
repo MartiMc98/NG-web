@@ -16,7 +16,7 @@ const AboutUs = () => {
 
 
       </motion.div>
-      <div className='flex flex-col items-center miFuenteBold sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl  text-black  bg-[#EBF4E2]'>
+      <div className='flex flex-col items-center p-4 gap-10 miFuenteBold sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl  text-black  bg-[#EBF4E2]'>
         <Carousel />
 
 
