@@ -8,6 +8,7 @@ import './styles/index.css';
 import { TeamForm } from './Screens/TeamForm';
 import ScrollToTop from './Components/ScrollToTop';
 import Formulario from './Components/Formulario';
+import 'leaflet/dist/leaflet.css';
 
 function App() {
     return <div className='flex flex-col '>
