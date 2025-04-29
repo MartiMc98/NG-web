@@ -1,25 +1,67 @@
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import markerIcon from 'leaflet/dist/images/marker-icon.png';
-import markerShadow from 'leaflet/dist/images/marker-shadow.png';
-import "leaflet/dist/leaflet.css";
 
+import React from 'react'
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import markerIcon from '/img/Logo-companias/marker-icon.png';
+import markerShadow from '/img/Logo-companias/marker-shadow.png';
 
 const MapComponent = () => {
+
   const position = [-34.622335, -68.350650];
 
   return (
     <div className="p-6 h-75">
       <MapContainer center={position} zoom={13} style={{ width: "100%", height: "100%" }}>
         <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' />
         <Marker position={position}>
           <Popup>Aquí está la dirección</Popup>
         </Marker>
       </MapContainer>
     </div>
-  );
-};
+
+
+  )
+}
 
 export default MapComponent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+// import markerIcon from 'leaflet/dist/images/marker-icon.png';
+// import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+// import "leaflet/dist/leaflet.css";
+
+
+// const MapComponent = () => {
+//   const position = [-34.622335, -68.350650];
+
+//   return (
+//     <div className="p-6 h-75">
+//       <MapContainer center={position} zoom={13} style={{ width: "100%", height: "100%" }}>
+//         <TileLayer
+//           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+//           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//         />
+//         <Marker position={position}>
+//           <Popup>Aquí está la dirección</Popup>
+//         </Marker>
+//       </MapContainer>
+//     </div>
+//   );
+// };
+
+// export default MapComponent;
