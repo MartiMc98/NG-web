@@ -61,7 +61,7 @@ const Formulario = () => {
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
             <form className='space-y-4' onSubmit={handleSubmit}>
-              <h1 className='text-2xl font-bold mb-4 text-[#001A57] text-center'>
+              <h1 className='text-3xl font-bold mb-4 text-[#001A57] text-center'>
                 Formulario para {tipo}
               </h1>
               {campos.map((campo, index) => {
@@ -74,31 +74,40 @@ const Formulario = () => {
                 }
                 options = options || [];
 
-                return campo.type === "select" ? (
-                  <select
-                    key={index}
-                    name={campo.name}
-                    value={formData[campo.name] || ''}
-                    onChange={handleChange}
-                    className='w-full p-3 border rounded-lg'
-                  >
-                    <option value="" disabled>{campo.placeholder}</option>
-                    {options.map((option, i) => (
-                      <option key={i} value={option}>{option}</option>
-                    ))}
-                  </select>
-                ) : (
-                  <input
-                    key={index}
-                    type={campo.type}
-                    name={campo.name}
-                    placeholder={campo.placeholder}
-                    required={campo.required}
-                    value={formData[campo.name] || ''}
-                    onChange={handleChange}
-                    className='w-full p-3 border rounded-lg'
-                  />
+                return (
+                  <div key={index} className="flex flex-col gap-1">
+                    <label htmlFor={campo.name} className="text-sm font-medium text-[#001A57]">
+                      {campo.label || campo.placeholder}
+                    </label>
+                    {campo.type === "select" ? (
+                      <select
+                        id={campo.name}
+                        name={campo.name}
+                        value={formData[campo.name] || ''}
+                        onChange={handleChange}
+                        className='w-full p-3 border rounded-lg'
+                        required={campo.required}
+                      >
+                        <option value="" disabled>{campo.placeholder}</option>
+                        {options.map((option, i) => (
+                          <option key={i} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    ) : (
+                      <input
+                        id={campo.name}
+                        type={campo.type}
+                        name={campo.name}
+                        required={campo.required}
+                        value={formData[campo.name] || ''}
+                        onChange={handleChange}
+                        className='w-full p-3 border rounded-lg'
+                        placeholder={campo.type === 'date' ? undefined : campo.placeholder}
+                      />
+                    )}
+                  </div>
                 );
+                
               })}
               <button
                 type='submit'
