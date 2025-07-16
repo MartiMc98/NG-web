@@ -36,7 +36,7 @@ export const Footer = () => {
                     </div>
                     <div className='flex items-center m-2'>
                         <img src='/img/icono-sobre.png' alt='icono mapa' className="w-7 h-7 mx-3" />
-                        <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>consultas@ngbrokerseguros.com</h5>
+                        <h5 className='textoRes text-base sm:text-sm md:text-md lg:text-lg xl:text-xl'>consultas@ngbrokerseguros.com.ar</h5>
                     </div>
 
                 </div>
