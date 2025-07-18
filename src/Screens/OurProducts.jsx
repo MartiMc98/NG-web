@@ -24,7 +24,7 @@ const OurProducts = () => {
       <motion.div initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.9 }}
-        viewport={{ once: true }} className='flex flex-col items-center gap-10 p-6  miFuenteBold sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl w-full text-black bg-[#EBF4E2]'>
+        viewport={{ once: true }} className='flex flex-col items-center gap-10 p-6  miFuenteBold sm:text-2xl md:text-3xl lg:text-3xl xl:text-4xl w-full text-black bg-[#F7F5F2]'>
         <Products />
 
       </motion.div>

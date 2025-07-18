@@ -55,13 +55,13 @@ const Formulario = () => {
         </h1>
       </div>
 
-      <div className='text-black bg-[#B6C9A1] p-6'>
-        <div className='max-w-md md:max-w-lg lg:max-w-[60vh] mx-auto bg-white p-6 rounded-lg border border-[#001A57]'>
+      <div className='text-black bg-[#F7F5F2] p-6'>
+        <div className='max-w-md md:max-w-lg lg:max-w-[60vh] mx-auto bg-white p-6 rounded-md border border-[#6F7F5E]'>
           {sent ? (
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
             <form className='space-y-4' onSubmit={handleSubmit}>
-              <h1 className='text-3xl font-bold mb-4 text-[#001A57] text-center'>
+              <h1 className='text-3xl font-bold mb-4 text-[#6F7F5E] text-center'>
                 Formulario para {tipo}
               </h1>
               {campos.map((campo, index) => {
@@ -76,7 +76,7 @@ const Formulario = () => {
 
                 return (
                   <div key={index} className="flex flex-col gap-1">
-                    <label htmlFor={campo.name} className="text-sm font-medium text-[#001A57]">
+                    <label htmlFor={campo.name} className="text-sm font-medium miFuenteBold text-[#6F7F5E]">
                       {campo.label || campo.placeholder}
                     </label>
                     {campo.type === "select" ? (
@@ -85,7 +85,7 @@ const Formulario = () => {
                         name={campo.name}
                         value={formData[campo.name] || ''}
                         onChange={handleChange}
-                        className='w-full p-3 border rounded-lg'
+                        className='w-full p-3 border border-[#6F7F5E] rounded-sm'
                         required={campo.required}
                       >
                         <option value="" disabled>{campo.placeholder}</option>
@@ -101,7 +101,7 @@ const Formulario = () => {
                         required={campo.required}
                         value={formData[campo.name] || ''}
                         onChange={handleChange}
-                        className='w-full p-3 border rounded-lg'
+                        className='w-full p-3 border border-[#6F7F5E] rounded-sm'
                         placeholder={campo.type === 'date' ? undefined : campo.placeholder}
                       />
                     )}
@@ -111,7 +111,7 @@ const Formulario = () => {
               })}
               <button
                 type='submit'
-                className='bg-[#001A57] miFuente w-full text-white py-2 rounded-lg hover:bg-blue-800 transition duration-300'
+                className='bg-[#6F7F5E] miFuenteBold w-full text-white py-2 rounded-lg hover:bg-[#9CAF88] transition duration-300'
               >
                 Enviar
               </button>

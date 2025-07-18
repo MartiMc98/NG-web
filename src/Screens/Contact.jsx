@@ -40,8 +40,8 @@ const Contact = () => {
 
       </motion.div>
 
-      <div className='p-10 text-black bg-[#B6C9A1]'>
-        <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-lg border border-[#001A57]'>
+      <div className='p-10 text-black bg-[#F7F5F2]'>
+        <div className='max-w-md md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-md border border-[#6F7F5E]'>
           {sent ? (
             <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
           ) : (
@@ -51,7 +51,7 @@ const Contact = () => {
             transition={{ duration: 0.9 }}
             viewport={{ once: true }} onSubmit={handleSubmit}>
 
-              <h1 className=' text-center miFuenteBold text-[#001A57] mb-3'>Dejanos tu mensaje: </h1>
+              <h1 className=' text-center miFuenteBold text-[#6F7F5E] mb-3'>Dejanos tu mensaje: </h1>
               <div>
                 <input
                   type="text"
@@ -59,7 +59,7 @@ const Contact = () => {
                   name="name"
                   value={form.name}
                   onChange={handleChange}
-                  className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2  outline-none"
+                  className="w-full mt-1 mb-5 p-2 border border-[#6F7F5E] rounded-md focus:ring-2  outline-none"
                   placeholder="Tu nombre"
                   required
                 />
@@ -71,7 +71,7 @@ const Contact = () => {
                   name="email"
                   value={form.email}
                   onChange={handleChange}
-                  className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
+                  className="w-full mt-1 mb-5 p-2 border border-[#6F7F5E] rounded-md focus:ring-2 outline-none"
                   placeholder="E-mail"
                   required
                 />
@@ -83,7 +83,7 @@ const Contact = () => {
                   name="number"
                   value={form.number}
                   onChange={handleChange}
-                  className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
+                  className="w-full mt-1 mb-5 p-2 border border-[#6F7F5E] rounded-md focus:ring-2 outline-none"
                   placeholder="Teléfono"
                   required
                 />
@@ -93,7 +93,7 @@ const Contact = () => {
                   name="message"
                   value={form.message}
                   onChange={handleChange}
-                  className="w-full h-30 mt-1 mb-5  p-2 border rounded-lg  focus:ring-blue-500 "
+                  className="w-full h-30 mt-1 mb-5  p-2 border border-[#6F7F5E] rounded-md focus:ring-blue-500 "
                   placeholder="Consulta"
                   required
                 />
@@ -105,7 +105,7 @@ const Contact = () => {
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 viewport={{ once: true }}
                 type="submit"
-                className="w-full bg-[#001A57] text-white py-2 rounded-lg hover:bg-blue-600 transition"
+                className="w-full bg-[#6F7F5E] text-white miFuenteBold py-2 rounded-lg hover:bg-[#9CAF88] transition"
               >
                 Enviar
               </motion.button>

@@ -38,19 +38,19 @@ export const TeamForm = () => {
                 <h1 className='titHomeResp miFuenteBold sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white'>¿Querés formar parte de nuestro equipo?</h1>
 
             </motion.div>
-            <div className='text-black bg-[#B6C9A1] p-6'>
+            <div className='text-black bg-[#F7F5F2] p-6'>
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}      // arranca invisible y un poco más abajo
                     whileInView={{ opacity: 1, y: 0 }}   // aparece con fade + subida
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    viewport={{ once: true }} className='md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-md border border-[#001A57]'>
+                    viewport={{ once: true }} className='md:max-w-lg lg:max-w-[50vh] mx-auto bg-white p-6 bg-white rounded-sm border border-[#6F7F5E]'>
                     {sent ? (
                         <p className='text-green-600'>¡Mensaje enviado con éxito!</p>
                     ) : (
 
                         <form onSubmit={handleSubmit}>
 
-                            <h1 className='miFuenteBold text-[#001A57] mb-3'>Completa el formulario y te contactaremos a la brevedad: </h1>
+                            <h1 className='miFuenteBold text-[#6F7F5E] mb-3'>Completa el formulario y te contactaremos a la brevedad: </h1>
                             <div>
                                 <input
                                     type="text"
@@ -58,7 +58,7 @@ export const TeamForm = () => {
                                     name="name"
                                     value={form.name}
                                     onChange={handleChange}
-                                    className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2  outline-none"
+                                    className="w-full mt-1 mb-5 p-2 border rounded-sm border-[#6F7F5E] focus:ring-2  outline-none"
                                     placeholder="Tu nombre"
                                     required
                                 />
@@ -70,7 +70,7 @@ export const TeamForm = () => {
                                     name="email"
                                     value={form.email}
                                     onChange={handleChange}
-                                    className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
+                                    className="w-full mt-1 mb-5 p-2 border rounded-sm border-[#6F7F5E] focus:ring-2 outline-none"
                                     placeholder="E-mail"
                                     required
                                 />
@@ -82,7 +82,7 @@ export const TeamForm = () => {
                                     name="number"
                                     value={form.number}
                                     onChange={handleChange}
-                                    className="w-full mt-1 mb-5 p-2 border rounded-lg focus:ring-2 outline-none"
+                                    className="w-full mt-1 mb-5 p-2 border rounded-sm border-[#6F7F5E] focus:ring-2 outline-none"
                                     placeholder="Teléfono"
                                     required
                                 />
@@ -94,7 +94,7 @@ export const TeamForm = () => {
                                     value={form.know}
                                     onChange={handleChange}
                                     name="know"
-                                    className="w-full mt-1 mb-5  p-2 border rounded-lg focus:ring-2 outline-none"
+                                    className="w-full mt-1 mb-5  p-2 border rounded-sm border-[#6F7F5E] focus:ring-2 outline-none"
                                     placeholder="¿Cómo nos conociste?"
                                     required
                                 />
@@ -104,7 +104,7 @@ export const TeamForm = () => {
                                     name="message"
                                     value={form.message}
                                     onChange={handleChange}
-                                    className="w-full h-30 mt-1 mb-5  p-2 border rounded-lg  focus:ring-blue-500 "
+                                    className="w-full h-30 mt-1 mb-5  p-2 border rounded-sm border-[#6F7F5E]  focus:ring-blue-500 "
                                     placeholder="Consulta"
                                     required
                                 />
@@ -112,7 +112,7 @@ export const TeamForm = () => {
 
                             <button
                                 type="submit"
-                                className="w-full mt-5 bg-[#001A57] text-white py-2 rounded-lg hover:bg-blue-600 transition"
+                                className="w-full mt-5 bg-[#6F7F5E] text-white miFuenteBold py-2 rounded-lg hover:bg-[#9CAF88] transition"
                             >
                                 Enviar
                             </button>

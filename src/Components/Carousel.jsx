@@ -36,7 +36,7 @@ export default function Carousel() {
  
     return (
        <>
-        <div ref={sliderRef} className="keen-slider bg-[#EBF4E2]">         
+        <div ref={sliderRef} className="keen-slider ">         
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-allianz.png" alt="logo-mercantil"/>
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-andina.png" alt="logo-triunfo"/>
           <img  className="keen-slider__slide number-slide1" src="/img/Logo-companias/logo-cooperacion.png" alt="logo-allianz"/>

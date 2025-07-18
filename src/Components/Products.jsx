@@ -106,7 +106,7 @@ function Card({ title, text, image, link }) {
 
                 <Link
                     to={link}
-                    className='bg-[#D15F29] px-4 py-2 bg-[#001A57] text-base sm:text-md md:text-lg lg:text-xl xl:text-[19px] text-white miFuenteBold hover:bg-blue-900 transition duration-300'>
+                    className='px-4 py-2 bg-[#D6A77A] text-base sm:text-md md:text-lg lg:text-xl xl:text-[19px] border border-[#D6A77A] rounded-sm miFuenteBold hover:bg-[#A17D5C] hover:text-white transition duration-300'>
                     Solicitar cotización </Link>
             </div>
 
