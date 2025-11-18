@@ -1,4 +1,4 @@
-import React from 'react'
+
 import fondoContact from '../../public/img/fondoSobreNosotros.png'
 import Carousel from '../Components/Carousel';
 import { Footer } from '../Components/Footer';

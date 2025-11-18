@@ -9,6 +9,7 @@ import { TeamForm } from './Screens/TeamForm';
 import ScrollToTop from './Components/ScrollToTop';
 import Formulario from './Components/Formulario';
 import 'leaflet/dist/leaflet.css';
+import PrivacyPolicy from './Screens/PrivacyPolicy';
 
 function App() {
     return <div className='flex flex-col '>
@@ -22,6 +23,7 @@ function App() {
             <Route path='/contact' element= {<Contact/>}/>
             <Route path='/teamForm' element= {<TeamForm/>}/>
             <Route path="/formulario/:tipo" element={<Formulario/>} /> 
+            <Route path='/politicadeprivacidad' element={<PrivacyPolicy/>}/>
         </Routes>
        </Router>
     </div>

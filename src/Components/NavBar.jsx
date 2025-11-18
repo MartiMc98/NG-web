@@ -6,6 +6,8 @@ const links = [
   { link: "/aboutus", text: "Nosotros", id: 2 },
   { link: "/ourproducts", text: "Nuestros Productos", id: 3 },
   { link: "/contact", text: "Contacto", id: 4 },
+  { link: "/politicadeprivacidad", text: "Política de Privacidad", id: 4 },
+
 ];
 
 const NavBar = () => {
